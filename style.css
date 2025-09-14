@@ -112,12 +112,25 @@ body {
 
 
 .hero {
-  padding: 160px 0;
+  padding: 160px 0 20px;
 }
 
 .hero__inner {
   display: flex;
   gap: 60px;
+}
+
+.hero__image {
+  position: relative;
+}
+.hero__image::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: -26px;
+  width: 68px;
+  height: 74px;
+  background-image: url("./img/hero-decor.svg");
 }
 
 .hero__image img {
@@ -136,12 +149,23 @@ body {
   margin-bottom: 90px;
 }
 
-.hero__title--big {
+.hero__title_big {
+  position: relative;
   font-size: 75px;
   letter-spacing: 0.04em;
 }
+.hero__title_big::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 163px;
+  height: 11px;
+  background-image: url("./img/title-decor.svg");
+  background-repeat: no-repeat;
+}
 
-.hero__title--bold {
+.hero__title_bold {
   font-size: 80px;
   letter-spacing: 0.04em;
   font-weight: 700;
@@ -307,11 +331,22 @@ body {
 }
 
 .subscribe__inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 60px 60px 75px;
   background-color: #000;
   border-radius: 32px;
+}
+
+.subscribe__inner::before {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: -38px;
+  width: 147px;
+  height: 91px;
+  background-image: url("./img/subscribe-decor.svg");
 }
 
 .subscribe__title {
@@ -360,9 +395,9 @@ body {
 }
 
 .reviews__inner {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .review__card {
@@ -427,7 +462,10 @@ body {
 .footer__resources-list{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 3px;
+}
+.footer__music-platforms {
+  padding: 0;
 }
 .footer__social-link {
   display: inline-block;
