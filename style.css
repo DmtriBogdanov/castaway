@@ -10,7 +10,7 @@ ul {
 }
 
 img {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: auto;
 }
@@ -565,17 +565,7 @@ body.is-lock {
     flex-direction: column;
     gap: 40px;
   }
-  .card__img {
-    width: 100%;
-    max-width: 648px;
-    aspect-ratio: 648 / 465;
-  }
 
-  .card__img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
   .your-host__inner {
     flex-direction: column-reverse;
@@ -641,6 +631,18 @@ body.is-lock {
   }
   .header__link {
     font-size: 40px;
+  }
+
+  .card__img {
+    width: 100%;
+    max-width: 648px;
+    aspect-ratio: 648 / 465;
+  }
+
+  .card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .footer__inner {
     flex-wrap: wrap;
